@@ -1,0 +1,159 @@
+// HappyVR 全局样式文件
+
+// 黑金主题色彩变量
+:root {
+  // 主色调 - 黑金主题
+  --primary-color: #d4af37; // 金色
+  --primary-light: #f4e4a6;
+  --primary-dark: #b8941f;
+  
+  // 背景色
+  --bg-primary: #0a0a0a; // 深黑色
+  --bg-secondary: #1a1a1a; // 次级黑色
+  --bg-tertiary: #2a2a2a; // 三级灰黑色
+  
+  // 文字颜色
+  --text-primary: #ffffff; // 主要文字 - 白色
+  --text-secondary: #cccccc; // 次要文字 - 浅灰
+  --text-tertiary: #999999; // 三级文字 - 中灰
+  
+  // 边框颜色
+  --border-primary: #333333;
+  --border-secondary: #444444;
+  
+  // 状态颜色
+  --success-color: #67c23a;
+  --warning-color: #e6a23c;
+  --danger-color: #f56c6c;
+  --info-color: #909399;
+}
+
+// Element Plus 主题定制
+.el-button--primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  
+  &:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+  }
+}
+
+// 全局样式重置
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--primary-color);
+  }
+}
+
+// 通用工具类
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+// 响应式断点
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+// 动画效果
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// 卡片样式
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+// 按钮样式
+.btn-gold {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+}
